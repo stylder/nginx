@@ -12,7 +12,7 @@ application.
 ## Installation
 1. [Install docker-compose](https://docs.docker.com/compose/install/#install-compose).
 
-2. Clone this repository: `git clone https://gitlab.com/airmetriks/nginx.git .`
+2. Clone this repository: `git clone https://github.com/stylder/nginx.git .`
 
 3. Modify configuration:
 - cp init-letsencrypt.template.sh init-letsencrypt.sh
