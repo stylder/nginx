@@ -1,7 +1,4 @@
-# Boilerplate for nginx with Let’s Encrypt on docker-compose
-
-> This repository is accompanied by a [step-by-step guide on how to
-set up nginx and Let’s Encrypt with Docker](https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71).
+# Nginx with Let’s Encrypt on docker-compose
 
 `init-letsencrypt.sh` fetches and ensures the renewal of a Let’s
 Encrypt certificate for one or multiple domains in a docker-compose
@@ -12,19 +9,21 @@ application.
 ## Installation
 1. [Install docker-compose](https://docs.docker.com/compose/install/#install-compose).
 
-2. Clone this repository: `git clone https://github.com/stylder/nginx.git .`
+2. [Install Curl](https://curl.se/download.html).
 
-3. Modify configuration:
+3. Clone this repository: `git clone https://github.com/stylder/nginx.git `
+
+4. Modify configuration:
 - cp init-letsencrypt.template.sh init-letsencrypt.sh
-- mv ./data/nginx/template.conf ./data/nginx/data.conf
-- Add domains and email addresses to init-letsencrypt.sh and data.conf
+- mv ./data/nginx/template.conf ./data/nginx/app.conf
+- Add domains and email addresses to init-letsencrypt.sh and app.conf
 - Replace all occurrences of example.org with primary domain (the first one you added to init-letsencrypt.sh) in data/nginx/app.conf
 
-4. Run the init script:
+5. Run the init script:
 
         ./init-letsencrypt.sh
 
-5. Run the server:
+6. Run the server:
 
         docker-compose up
 
