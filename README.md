@@ -1,19 +1,18 @@
-# Nginx with Let’s Encrypt on docker-compose
+# Nginx with Let’s Encrypt on docker
 
 `init-letsencrypt.sh` fetches and ensures the renewal of a Let’s
-Encrypt certificate for one or multiple domains in a docker-compose
+Encrypt certificate for one or multiple domains in a docker compose
 setup with nginx.
 This is useful when you need to set up nginx as a reverse proxy for an
 application.
 
 ## Installation
-1. [Install docker-compose](https://docs.docker.com/compose/install/#install-compose).
 
-2. [Install Curl](https://curl.se/download.html).
+1. [Install Curl](https://curl.se/download.html).
 
-3. Clone this repository: `git clone https://github.com/stylder/nginx.git `
+2. Clone this repository: `git clone https://github.com/stylder/nginx.git `
 
-4. Modify configuration:
+3. Modify configuration:
 - cp init-letsencrypt.template.sh init-letsencrypt.sh
 - mv ./data/nginx/template.conf ./data/nginx/app.conf
 - Add domains and email addresses to init-letsencrypt.sh and app.conf
@@ -25,7 +24,7 @@ application.
 
 6. Run the server:
 
-        docker-compose up
+        docker compose up -d
 
 ## License
 All code in this repository is licensed under the terms of the `MIT License`. For further information please refer to the `LICENSE` file.
