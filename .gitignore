@@ -1,2 +1,4 @@
+.idea
 init-letsencrypt.sh
 data/nginx/app.conf
+data/certbot
